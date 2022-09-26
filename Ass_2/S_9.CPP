@@ -1,0 +1,50 @@
+#include<iostream.h>
+#include<conio.h>
+
+class TIME
+{
+	public :
+		int h;
+		int m;
+		int s;
+		void get()
+		{
+			cout<<"\n Enter the Hours -> ";
+			cin>>h;
+			cout<<"\n Enter the Minute -> ";
+			cin>>m;
+			cout<<"\n Enter the second -> ";
+			cin>>s;
+		}
+		void put()
+		{
+			cout<<"\n house is : "<<h;
+			cout<<"\n minute is : "<<m;
+			cout<<"\n second is : "<<s;
+		}
+		TIME operator +(TIME t2)
+		{
+			TIME temp;
+			temp.h=h+t2.h;
+			temp.m=m+t2.m;
+			temp.s=s+t2.s;
+
+			return temp;
+		}
+};
+void main()
+{
+	TIME t1,t2,t3;
+	clrscr();
+
+	cout<<"\n Data of T1 \n";
+	t1.get();
+	cout<<"\n Data of T2 \n";
+	t2.get();
+	cout<<"\n Addition of two object of data :- ";
+	t3=t1+t2;
+	t3.put();
+
+	getch();
+
+}

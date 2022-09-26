@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+
+class binary
+{
+	public:
+		int x;
+		void get()
+		{
+			cout<<"\nEnter Value ->";
+			cin>>x;
+		}
+		friend int operator +(binary &b1,binary &b2)
+		{
+			int temp;
+			temp=b1.x+b2.x;
+			return temp;
+		}
+};
+void main()
+{
+	clrscr();
+	binary b1,b2;
+	int temp;
+	temp=b1+b2;
+	cout<<temp;
+	getch();
+}
