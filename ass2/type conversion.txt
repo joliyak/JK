@@ -1,0 +1,17 @@
+1) write  a c++ program to create class TIME which consist members like hours,minutes,and seconds.
+
+insert any numerical value and convert it into hours,minutes and seconds(hint:basic to class type conversion).
+
+2) write  a c++ program to create class Weight which consist members like gram and kilogram.
+
+insert any numerical value and convert it into gram  and kilogram(hint:basic to class type conversion).
+
+3) write  a c++ program to create class Calender which consist members like year,month,week,day.
+
+insert any numerical value and convert it into year,month,week,day(hint:basic to class type conversion).
+
+4) write  a c++ program to create class Currency which consist members like notes of tw_thousand,five_hundred,tw_hundred,one_hundred,fifty,twenty,ten,five,one.
+
+insert any numerical value and convert it into notes of tw_thousand,five_hundred,tw_hundred,one_hundred,fifty,
+wenty,ten,five,one. (hint:basic to class type conversion).
+

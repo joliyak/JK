@@ -1,0 +1,242 @@
+*  WHAT  IS  POLLYMORPHISM ? EXPLAIN IN DETAIL ?
+		OR
+    EXPLAIN  TYPES  OF  POLLYMORPHISM  WITH  EXAMPLE ?
+		OR
+    WHAT IS  COMPILE TIME  POLLYMORPHISM  &  EXPLAIN  WITH  PROPER  EXAMPLE ?
+  		OR
+   WHAT  IS  LATE  BINDING  & EXPLAIN  IN  DETAIL ?
+
+
+*INTRODUCTION :----
+-------------------------
+
+---------->	POLLYMORPHISM  IS  A GREEK  WORD  WHICH  IS  
+	COMBINATION  OF  POLLY + MORPH.
+		
+---------->	IT REFERS AS ONE NAME  BUT  DIFFERENT  TASK .  
+
+---------->	POLLYMORPHISM  IS  UNIQUE  FETURE  OF  OOP  WHICH
+	 REPRESENT  SINGLE  NAME  BUT  MULTIPLE  FORMS.
+
+---------->	TYPE OF POLLY MORPHSIM  
+
+			TYPES   OF   POLLYMORPHISM  
+			-------------------------------------------
+			
+
+
+
+	1>COMPILE  TIME  				2> RUN TIME 
+	
+
+1>METHOD			2>OPERATOR  				VIRTULA   FUNCTION  OR
+    OVERLOADING 		     	      OVERLOADING				  METHOD  OVERLOADING 
+                           / \				         / \
+	      /     \				       /     \
+	    /         \				     /         \
+	  /             \				   /             \
+	/	\			/	\
+                /	                      \		                 /	                      \
+1>IMPLIMENT      2>IMPLIMENT	             1> UNARY         2>BINARY
+     USING 		  USING		           OPERATOR	    OPERATOR
+     MEMBER 	   FRIEND 
+    FUNCTION 	FUNCTION 
+
+
+
+
+
+1> COMPILE  TIME  
+    ------------------------
+
+	---------->	A POLLYMORPHISM  DONE  AT  THE  TIME  OF
+		  COMPILATION  IS  CALLED    COMPILE  TIME  
+		  POLLYMORPHISM .
+
+	---------->	IT  IS  ALSO  CALLED  EARLY  BINDING  OR  STATIC  BINDING  OR  
+		STATIC  LINKLING .
+
+	---------->	THERE  ARE  TWO  TYPES  OF  COMPLIE  TIME 
+		 POLLYMORPHISM   SUCH  AS 
+		
+		1>METHOD   OVERLOADING  
+		2>OPERATOR  OVERLOADING 
+
+1>METHOD  OVERLOADING  
+    --------------  --------------------- 
+
+	---------->	SAME  NAME  METHOD  DEFINE  WITH  DIFFERENT  ARGUMENTS  
+		ARE  CALLED  METHOD  OVERLOADING .
+
+	---------->	IT  IS  WE  CAN  DEFINE  MULTIPLE  METHOD  
+		WITH  COMAN  NAME  BUT   ARGUMENTS  
+		MUST  BE  DIFFERENT.
+
+ 	---------->	IT  CAN  IMPLIMENTS  IN  TWO  DIFFERENT  WAYS 
+		 SUCH  AS 
+		1> USING  MEMBER  FUNCTION  
+		2>USING  FRINEND  FUNCTION 
+
+1>USING  MEMBER  FUNCTION 
+     ---------  -------------  ----------------
+		
+	---------->	A FUNCTION  DEFINE  INSIDE  THE  CLASS  IS CALLED
+		  MEMBER  FUNCTION .
+
+	---------->	WE  CAN  IMPLIMENT  METHOD  OVRLOADING 
+		  IN  FOLLOWING  WAY  
+
+*EXAMPLE  :
+  --------------
+
+	CLASS  DEMO 
+	{
+		
+		PUBLIC : 
+			 INT X,Y ;
+
+				DEMO()
+				{
+					X=10;
+					Y= 20;
+				}
+				
+			VOID  SUM ()
+			{
+				COUT<<"\N   SUM  IS  :  "<<X+Y;
+			}
+		
+			VOID SUM (INT A , INT B)
+			{
+				COUT<<"\N  SUM  IS  : "<<A+B;
+			}
+
+	};
+
+	VOID MAIN()
+	{
+		DEMO  D;
+		D.SUM();
+		D.SUM(100,200);
+	}
+
+
+2>USING  FRIEND  FUNCTION  
+     ---------  ----------- ---------------
+
+	---------->	SHARING  DATA  BETWEEN  TWO  DIFFERENT   CLASSES  ARE 
+		 CALLED  FRIEND  FUNCTION .
+	
+	---------->	FRIEND  KEYWORD  IS  REQUIRED  TO  DEFINE 
+		 THE  FRIEND  FUNCTION   BUT  AT  A  TIME  OF 
+		 FUNCTION  DECLARATION    FRIEND KEYWORD  
+		 IS  NOT  REQUIED.
+
+	---------->	ARGUMENT  MUST  BE  TYPES  OF  OBJECT  AND 
+		 MEMBER  CAN BE  ACCESS  USING  OBJECTS  AND
+		   DOT  OPERATOR  ONLY .
+		
+	---------->	EARLY  DECLARTION   IS  REQURIED  .
+		
+	---------->	CALL AS  NORMAL  FUNCTION  .
+		
+	---------->	CAN  BE  DEFINE  IN  ANY  SCOPE   EITHER 
+		 PUBIC  OR  PRIVATE .
+
+
+	EXAMPLE :
+	--------------
+
+		CLASS DEMO1
+		CLASS   DEMO 
+		{
+			PUBLIC : 
+				INT X;
+
+				DEMO ()		
+				{
+					X=20;			
+				}
+				FRIEND  INT    SUM (DEMO  D , DEMO  D1 )
+				{
+						INT  TOTAL ;
+						TOTAL = D.X+D1.Y;
+					
+						RETURN    TOTAL;
+
+
+				}
+
+		};				
+			
+		CLASS  DEMO1 
+		{
+			PUBLIC :
+				INT Y;
+
+					DEMO1()
+					{
+						Y=5;
+					}
+					
+					FRIEND VOID  SUM(DEMO , DEMO1);
+
+		};
+
+		VOID MAIN()
+		{
+			CLRSCR();
+			DEMO D;
+			DEMO1  D1;
+
+			INT TOT=SUM(D,D1);
+			COUT<<"\N  TOTAL  IS : "<< TOT;
+			
+			GETCH();
+		}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

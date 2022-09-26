@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<conio.h>
+
+class claculate
+{
+	int no;
+	public:
+		void  area()
+		{
+			no=5;
+			cout<<"\n ans :- "<<no*no;
+
+		}
+		void area(float r)
+		{
+			cout<<"\n area of circle:= "<<3.14*(r*r);
+
+		}
+		void area(float b,float h)
+		{
+			cout<<"\n area of teiangle:- "<<1.0/2.0*(h*b);
+
+		}
+
+
+
+
+};
+
+void main()
+{
+	clrscr();
+	claculate c;
+	c.area();
+	c.area(5);
+	c.area(7,10);
+	getch();
+
+}
